@@ -42,3 +42,5 @@ public:
     std::string getDescription() const override;
     int getDamage() const override;
 };
+
+int main() { return 0; }
