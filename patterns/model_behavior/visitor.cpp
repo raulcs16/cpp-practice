@@ -7,11 +7,11 @@ class TeasureChest;
 
 class GameObjectVisitor {
 public:
-    virtual void visit(Tree &tree) = 0;
+    virtual void visit(tree &tree) = 0;
 
-    virtual void visist(Rock &rock) = 0;
+    virtual void visist(rock &rock) = 0;
 
-    virtual void visist(TeasureChest) = 0;
+    virtual void visist(teasurechest) = 0;
 };
 
 class GameObject {
@@ -29,3 +29,11 @@ class Tree : public GameObject {
     void open();
     ;
 };
+
+class LooterVisotor : public GameObjectVisitor {
+private:
+public:
+    void visit(tree &tree) override = 0;
+    void visist(rock &rock) override = 0;
+    void visist(teasurechest) override = 0;
+}
